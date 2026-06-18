@@ -2429,17 +2429,17 @@ input[type="range"] { accent-color: var(--gold); }
         <div class="struggle-card" onclick="openStruggle('school')">
           <div class="struggle-icon"></div>
           <div class="struggle-title">At School</div>
-          <div class="struggle-desc">Bullying, grades, teachers, fitting in</div>
+          <div class="struggle-desc">Bullying, grades, teachers, finding your crew</div>
         </div>
         <div class="struggle-card" onclick="openStruggle('finance')">
           <div class="struggle-icon"></div>
           <div class="struggle-title">Financial Freedom</div>
-          <div class="struggle-desc">Money, debt, building wealth from zero</div>
+          <div class="struggle-desc">Money, debt, starting from the bottom</div>
         </div>
         <div class="struggle-card" onclick="openStruggle('future')">
           <div class="struggle-icon"></div>
           <div class="struggle-title">Future Planning</div>
-          <div class="struggle-desc">Career, college, next steps, big decisions</div>
+          <div class="struggle-desc">Career, college, making your next - your best move</div>
         </div>
       </div>
     </div>
@@ -2657,15 +2657,16 @@ input[type="range"] { accent-color: var(--gold); }
         <option value="stream">Going Live / Stream</option>
         <option value="music">Music Release</option>
         <option value="achievement">Achievement / Milestone</option>
+        <option value="other">Other</option>
       </select>
     </div>
     <div class="form-group">
       <label class="form-label">Title</label>
-      <input type="text" class="form-input" id="drop-title-input" placeholder="e.g. New collection drops Friday 8pm">
+      <input type="text" class="form-input" id="drop-title-input" placeholder="e.g. New shirts drops Friday 8pm">
     </div>
     <div class="form-group">
       <label class="form-label">Details</label>
-      <textarea class="form-input" id="drop-body-input" placeholder="Tell the community what's coming and why it matters..." style="min-height:90px;"></textarea>
+      <textarea class="form-input" id="drop-body-input" placeholder="Tell the community what's going on..." style="min-height:90px;"></textarea>
     </div>
     <div class="form-group">
       <label class="form-label">Link (optional)</label>
@@ -2680,7 +2681,7 @@ input[type="range"] { accent-color: var(--gold); }
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal('task-create-modal')"></button>
     <div class="modal-title">Assign a <span style="color:var(--gold)">Task</span></div>
-    <div class="modal-subtitle">Break a goal into objectives. Your mentee checks them off — you both track the climb.</div>
+    <div class="modal-subtitle">Break a goal into objectives. Your mentee checks them off while you both track the climb.</div>
     <div class="form-group">
       <label class="form-label">Assign To</label>
       <select class="form-input form-select" id="task-target"></select>
@@ -2702,7 +2703,7 @@ input[type="range"] { accent-color: var(--gold); }
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal('announce-modal')"></button>
     <div class="modal-title">Make an <span style="color:var(--gold)">Announcement</span></div>
-    <div class="modal-subtitle">Every mentee who chose you sees this on their Goals tab. You'll see who has acknowledged it.</div>
+    <div class="modal-subtitle">All your mentees will see their assignment on their Goals tab. You'll see who has acknowledged the Task.</div>
     <div class="form-group">
       <label class="form-label">Message</label>
       <textarea class="form-input" id="announce-input" placeholder="e.g. Group call this Sunday 6pm. Come with one question about your goal." style="min-height:100px;"></textarea>
@@ -2746,7 +2747,7 @@ input[type="range"] { accent-color: var(--gold); }
 
     <div class="form-group">
       <label class="form-label">Bio</label>
-      <textarea class="form-input" id="cust-bio" placeholder="Tell The Future who you are and how you can help..." style="min-height:90px;"></textarea>
+      <textarea class="form-input" id="cust-bio" placeholder="Say who you are and how you can help..." style="min-height:90px;"></textarea>
       <div class="bio-counter" id="cust-bio-counter">0 / 125 words</div>
     </div>
 
@@ -2823,7 +2824,7 @@ input[type="range"] { accent-color: var(--gold); }
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal('topic-builder-modal')"></button>
     <div class="modal-title">Build a <span style="color:var(--gold)">Topic</span></div>
-    <div class="modal-subtitle" id="topic-builder-sub">Curate a lesson plan: lessons in order, books in the middle, movies at the end.</div>
+    <div class="modal-subtitle" id="topic-builder-sub">Curate a lesson plan: lessons in order, books in the middle, movies/videos at the end.</div>
     <div class="form-group">
       <label class="form-label">Topic Title</label>
       <input type="text" class="form-input" id="tb-title" placeholder="e.g. Understanding Your Credit Score">
@@ -3149,14 +3150,14 @@ function handleReviewSubmission(event) {
 
 const MENTORS = [
   { id:'talik', name:'Talik', track:'Streaming & Content', emoji:'', tags:['Twitch','Content'], bio:'Built a streaming career from zero. Knows the grind behind the highlight reel.' },
-  { id:'averyion', name:'Averyion', track:'YouTube & Media', emoji:'', tags:['YouTube','Media'], bio:'YouTube creator who turned passion into platform. Audience-building is a science.' },
-  { id:'brandon', name:'Brandon', track:'Trades & Skilled Work', emoji:'', tags:['Trades','Blue Collar'], bio:'Electrician and entrepreneur. Trades are recession-proof and six-figure paths.' },
-  { id:'drew', name:'Drew', track:'College Prep', emoji:'', tags:['College','Academics'], bio:'First-gen college grad. Navigated scholarships, apps, and imposter syndrome.' },
-  { id:'ryan', name:'Ryan', track:'Sports & Athletics', emoji:'', tags:['Sports','Fitness'], bio:'Played D1 ball. Now coaches young athletes on mindset and longevity.' },
-  { id:'jahad', name:'Jahad', track:'Clothing & Fashion', emoji:'', tags:['Fashion','Brand'], bio:'Launched a streetwear brand at 19. Fashion is business — branding is everything.' },
-  { id:'tamia', name:'Tamia', track:'Music & Arts', emoji:'', tags:['Music','Arts'], bio:'Singer-songwriter navigating the industry. Authentic art is the only sustainable art.' },
-  { id:'dom', name:'Dom', track:'Business & Finance', emoji:'', tags:['Business','Investing'], bio:'Started investing at 17. Wealth-building is a skill you learn — not luck.' },
-  { id:'aj', name:'AJ', track:'Community Leadership', emoji:'', tags:['Leadership','Community'], bio:'Organizer, mentor, advocate. The block needs people who go back for others.' },
+  { id:'averyion', name:'Averyion', track:'YouTube & Media', emoji:'', tags:['YouTube','Content'], bio:'YouTube creator who turned passion into platform. Audience-building is a science.' },
+  { id:'brandon', name:'Brandon', track:'Trades & Skilled Work', emoji:'', tags:['Trades','Blue Collar'], bio:'Entrepreneur. Trades are recession-proof and six-figure paths.' },
+  { id:'drew', name:'Drew', track:'Trades & Skilled Work', emoji:'', tags:['Trades','Blue Collar'], bio:'Trades are recession-proof and six-figure paths.' },
+  { id:'ryan', name:'Ryan', track:'Trades & Skilled Work', emoji:'', tags:['Trades','Blue Collar'], bio:'Trades are recession-proof and six-figure paths.' },
+  { id:'jahad', name:'Jahad', track:'Clothing & Fashion', emoji:'', tags:['Fashion','Brand'], bio:'Launched a streetwear brand. Fashion is business, branding is everything.' },
+  { id:'tamia', name:'Tamia', track:'College', emoji:'', tags:['Nuclear Medicine','Health-Track'], bio:'Very knowledgable of sciences. Smartest Scientist in Virginia and it is proven.' },
+  { id:'dom', name:'Dom', track:'College', emoji:'', tags:['Hip - Hop','Poetry'], bio:'A love for expression with words and rhymes.' },
+  { id:'aj', name:'AJ', track:'Clothing & Fashion', emoji:'', tags:['Leadership','Community'], bio:'Organizer, mentor, advocate. The block needs people who go back for others.' },
 ];
 
 // ==========================================================
